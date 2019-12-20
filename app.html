@@ -1,0 +1,271 @@
+		
+			<div class="SidePanel">
+				<div class="SideHead">
+					<div class="ViewName" >Application Home</div>
+					
+					<div class="SideBtns">
+						
+						<a id="saveProject" class="microBtn save-btn" title="Save"></a>
+						<a id="resetProject" class="microBtn reset-btn" title="Reset application	"></a>
+						<a id="expandCard" class="microBtn expand-btn" title="Expand or collapse all cards"></a>
+					</div>
+					
+				</div>
+				<div class="SideList emic-scroll">
+					<ul >
+					
+						<li > <span> <a id="link1"  class="nav-link" href="#"><span class ="NavIcon prs"></span>Salesforce Hours</a></span></li>
+						<li ><span><a id="link2"  class="nav-link" href="#"><span class ="NavIcon bi"></span> Project Review</a></span></li>
+						<li ><span><a id="link3" class="nav-link" href="#"><span class ="NavIcon frs"></span>Overtime</a></span></li>
+						<li ><span><a id="link4" class="nav-link" href="#"><span class ="NavIcon pmc"></span>Upload Timelogs</a></span></li>
+						<li ><span><a id="link5" class="nav-link" href="#"><span class ="NavIcon pmc"></span>Upload History</a></span></li>
+						<li ><span><a id="link6" class="nav-link" href="#"><span class ="NavIcon prs"></span>Manager Dashboard</a></span></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="PageArea" class="emic-scroll">
+				
+				
+				<div class="card-context" id="cardContext1">
+					<div id ="card1" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Filters
+						</div>
+						<div class ="CardBody">
+							 <div class = "question-box">
+                                <p class="question-para"> Please select the relevant porject name or CG code</p>
+								
+								
+                            </div>
+							
+							Actual filters/ Slicers/ multiselect
+							
+						</div>
+						
+					</div>
+					
+					<div id ="card2" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Salesforce Charts & Data
+							<script src= ></script>
+						</div>
+						<div class="CardBody">
+							  <div class = "question-box">
+                                <p class="question-para"> Please find below the hours for all the selection(can be linked to the top )</p>
+								
+                            </div>
+							Left side Data table/ Right side chart.
+							<div id = "handsOnTable"></div> 
+						</div>
+						
+					</div>	
+				</div>	
+				<div class="card-context" id="cardContext2">
+					<div id ="card3" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Filters
+						</div>
+						<div class ="CardBody">
+							  <div class = "question-box">
+                                <p class="question-para"> Filter text
+								</p>
+								Actuals filters multi-select
+                              </div>
+						</div>
+						
+					</div>
+					
+					<div id ="card4" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Project Review Dashboard
+							
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                                <p class="question-para"> Selection texts 
+								</p>							
+                            </div>
+                            <table>
+                            	<tr>
+                            		<td>
+							    		<div id="PieChartHolder" style="width: 600px; height: 400px;"></div>
+							    	</td>
+						    		<td>
+					    				<div id="barChart" style="width: 600px; height: 400px;" ></div>
+						  			</td>
+						  		</tr>
+						  </table>
+                            <!--<div id="PieChartHolder"></div>-->
+							Left Side pie/ Right side bar charts.
+						</div>
+						
+					</div>
+				</div>
+				<div class="card-context" id="cardContext3">				
+					<div id ="card5" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Filter
+						</div>
+						<div class ="CardBody">
+							 <div class = "question-box">
+                                <p class="question-para"> 
+								Filter note.
+								</p>
+                              </div> 
+								Searchable Filters	
+								1. Project code - Project name
+								2. Activity name
+								3. Week Range
+														
+						</div>
+						
+					</div>
+					
+					<div id ="card6" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Overtime Dashboard
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                             
+                                <p class="question-para"> Selection note, linked to the above
+								</p>
+                            </div>
+                            <div id="linechart_material" style="width: 1100px; height: 400px;"></div>
+							Line chart of activities by week range.
+						</div>
+						 
+					</div>
+					
+				</div>
+				<div class="card-context" id="cardContext4">				
+					<div id ="card7" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Upload Timelogs
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+							   <div class="container" role="main">
+							
+									<fieldset style="height:95px; ">
+										  <label for="csvFileInput"> <strong>CSV File:<br><br></strong>
+										  </label>
+										  <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+										  accept="*.csv" multiple>
+									</fieldset>
+								</div>
+                                <p class="question-para"> Upload note
+								</p>
+                            </div> 
+							Add a popup to notify the user on previous errors
+							Add the file upload button.
+						</div>
+					</div>	
+					<div id ="card8" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Upload Errors
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+							
+								<div class="hot container">
+									<div id="htcontainer"></div>
+								</div>
+								
+                                <p class="question-para"> 
+								note 
+								</p>
+                            </div> 
+							Download the erros.
+							User History with error count sorted by latest date.
+						</div>
+					</div>
+					
+				</div>	
+				<div class="card-context" id="cardContext5">						
+				
+					<div id ="card9" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Error Details
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                             
+                                <p class="question-para"> None
+								
+								</p>
+                            </div> 
+							Error details by run, default is latest run.
+							
+						</div>
+				
+					</div>
+					<div id ="card10" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Errors Due
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                             
+                                <p class="question-para"> None
+								
+								</p>
+                            </div> 
+							Table with due errors by day
+							
+						</div>
+				
+					</div>
+					<div id ="card11" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Upload History 
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                             
+                                <p class="question-para"> None
+								
+								</p>
+                            </div> 
+							Upload History with error count
+							
+						</div>
+				
+					</div>
+					
+				</div>	
+				<div class="card-context" id="cardContext6">				
+					<div id ="card12" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Filters
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                               
+                                <p class="question-para"> Please select the relevant office
+								</p>
+                            </div> 
+							Actual filters/ Slicers/ multiselect
+						</div>
+					</div>	
+					<div id ="card13" class="card">
+						<div class="label"  onClick="showHideCard()">
+							Manager Dashboard
+						</div>
+						<div class ="CardBody">
+							<div class = "question-box">
+                                <p class="question-para"> 
+								note 
+								</p>
+                            </div> 
+							
+						</div>
+					</div>
+					
+				</div>	
+				
+				
+			</div>  
+		
+		

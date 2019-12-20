@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  
+  <title>Timelogs - Euromonitor Consulting</title>
+  
+  <link href="./app/css/EMIapp.css" type="text/css" rel="stylesheet"/>
+  <link href="./app/css/frmLogin.css" type="text/css" rel="stylesheet"/>
+  <link href="./app/css/frmSignup.css" type="text/css" rel="stylesheet"/>
+  <link href="./app/assets/handsontable/handsontable.full.min.css" type="text/css" rel="stylesheet"/>
+  
+  <link rel="icon" href="./app/css/imgs/icons/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" type="text/css" href="./node.js/Shell/Timelogs/appStatic/js/handsontable-6.2.2/dist/handsontable.full.min.css">
+  
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+    <script type="text/javascript" src="./app/js/raw_tlprocess.js"></script> 
+    <script type="text/javascript" src="node.js/Shell/Timelogs/appStatic/js/handsontable-6.2.2/dist/handsontable.full.min.js"></script>
+	<script language="javascript" type="text/javascript" src="./app/js/jquery-3.4.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="./app/js/csv.min.js"></script>
+    <script language="javascript" type="text/javascript" src="./app/js/authentica.js" ></script>
+	<script language="javascript" type="text/javascript" src="./app/assets/handsontable/handsontable.full.min.js" ></script>
+	<script language="javascript" type="text/javascript" src="./app/js/charts.js" ></script>
+	<script language="javascript" type="text/javascript" src="./app/js/app.js" ></script>	
+</head>
+
+<body >
+	<ul id="main" >
+		<li id="HeadPanel">
+			<span id="MenuBtn"></span>
+			<span id="AppName" >Timelogs</span>
+			
+			<span id="UserPanel">
+				<span class="UserButton" id="UserCtrl">
+					<div class="userOptions">
+						<a id="UserChangePwd" href="#">Account Settings</a>
+						<a id="UserHelp"  href="#">Help</a>
+						<a id="UserSignOut" href="#">Sign Out</a>
+					</div>
+				</span>
+			
+			</span>	
+		</li>
+		<li id="MidBody">
+			<div class="login">
+				<form method="post" class="emi_login_form" action="">
+					<h4>Login</h4>
+					<h3 id="login_error" class="emi_login_form_err"></h3>
+					<p>
+						<span>Email </span>
+						<input class="login_inp" id="login_email_inp" type="text" placeholder="Enter email here">
+					</p>
+					<p>
+						<span>Password</span>
+							<input class="login_inp" id="login_pwd_inp" type="password" placeholder="Enter password here">
+					</p>
+					<p class="remember_me">
+						<label>
+							<input type="checkbox" name="remedmber_me" id="remember_me">
+							Remember me on this computer
+						</label>
+					</p>
+					<p>
+						<input type="button" id="emi_login" class="emi_login_form_btn" value="Login">
+					</p>
+				 </form>
+					<a href="#" id="newAcc">Create a new account</a>
+					|
+					<a href="">Forgot Password</a>
+			</div>
+
+		</li>
+		<li id="Footer">
+			<span id="StatusBar"> App version 2019-09-09</span>
+			<span id="Branding">Powered By Catalyst | NextGen Automation</span>
+		</li>
+	</ul>
+	
+	<div id="popFrame" class="pop-frame hidden">
+		<div class="pop-background">
+		 
+		</div>
+		<div class="pop-box">
+				<div id="popHeader" class="pop-header">Euromonitor Consulting</div>
+				<div id="popBody"  class="pop-body">Message body would appear here</div>
+				<div class ="pop-buttons">
+							
+								<input
+									type="button"
+									class="emi_form_btn"
+									value="OK"
+									id="popOkBtn"
+									onclick="hidePopBox()";
+								/>
+				</div>
+		</div>
+	
+	</div>
+	
+</body>
+
+</html>
+	
